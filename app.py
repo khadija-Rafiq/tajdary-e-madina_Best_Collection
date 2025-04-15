@@ -543,7 +543,7 @@ if check_password():
         'https://i.pinimg.com/736x/28/b4/41/28b441c4990271334a1ba68ec2cd9ea8.jpg',
         'https://i.pinimg.com/736x/a0/9e/9a/a09e9aae5167320bd6cb4e042463c64e.jpg',
         'https://i.pinimg.com/736x/36/28/7f/36287f03327321f59a33e80652b2a4e1.jpg'
-    ], use_column_width=True, caption=["1", "2", "3", "4"])
+    ], use_container_width=True, caption=["1", "2", "3", "4"])
 
     # Shop Now button below Featured Collections
     if st.button("Shop Now - Place Your Order"):
@@ -568,6 +568,11 @@ if check_password():
     
     st.markdown("### 📦 Order Online")
     st.write("🚚 Fast Delivery | 💳 Secure Payment | 🛍️ Easy Shopping")
+
+    if st.button(" Place Your Order"):
+        webbrowser.open_new_tab("https://forms.gle/BNDJKQ7HA8CKa2mC9")
+        st.success("Redirecting to Order Form...")
+
 
     st.markdown("### 📍 Visit Our Store")
     st.write("📍 Shop no# G-15, Karimabad Mina Bazar, Tajdar-e-Madina, Karachi")
