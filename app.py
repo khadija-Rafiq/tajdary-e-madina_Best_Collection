@@ -695,7 +695,7 @@ if check_password():
     st.write("🚚 Fast Delivery | 💳 Secure Payment | 🛍️ Easy Shopping")
 
     if st.button(" Place Your Order"):
-        webbrowser.open_new_tab("https://forms.gle/BZo292fwcyAxaxbj6")
+        webbrowser.open_new_tab("https://docs.google.com/forms/d/1i4kzA7WICq6TrbRD1pNX-0ff4M082muRsI6lAgIW5WE/edit")
         
 
     st.markdown("### 📍 Visit Our Store")
