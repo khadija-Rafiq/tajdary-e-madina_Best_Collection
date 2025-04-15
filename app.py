@@ -172,6 +172,9 @@ from PIL import Image
 import streamlit.components.v1 as components
 import webbrowser
 
+# FIX: Page config should be at the top
+st.set_page_config(page_title="Tajdary Madina Collection", layout="wide")
+
 # ---------- PASSWORD PROTECTION ----------
 def check_password():
     if "password_correct" not in st.session_state:
@@ -193,56 +196,54 @@ def check_password():
 # ---------- YOUR ACTUAL APP ----------
 if check_password():
 
-    st.set_page_config(page_title="Tajdary Madina Collection", layout="wide")
-
     # Custom CSS
     st.markdown("""
         <style>
         body, .stApp {
-                background-color: #f8f9fa;
-            }
-            .main-header {
-                text-align: center;
-                font-size: 55px;
-                font-weight: bold;
-                color: white;
-                background: linear-gradient(to right,rgb(14, 10, 12), #C71585);
-                padding: 15px;
-                border-radius: 15px;
-                box-shadow: 0px 4px 10px rgba(199, 21, 133, 0.5);
-            }
-            .sub-header {
-                text-align: center;
-                font-size: 20px;
-                color: #555;
-            }
-            .collection-title {
-                font-size: 25px;
-                font-weight: bold;
-                color: #C71585;
-            }
-            .footer {
-                text-align: center;
-                font-size: 14px;
-                color: gray;
-                margin-top: 50px;
-            }
-            .stButton>button {
-                background: linear-gradient(to right, #FF1493, #C71585);
-                color: white;
-                font-size: 18px;
-                font-weight: bold;
-                padding: 12px 24px;
-                border-radius: 25px;
-                border: none;
-                transition: 0.3s ease-in-out;
-                box-shadow: 0px 4px 10px rgba(199, 21, 133, 0.5);
-            }
-            .stButton>button:hover {
-                background: linear-gradient(to right, #C71585, #FF1493);
-                transform: scale(1.05);
-                box-shadow: 0px 6px 15px rgba(255, 20, 147, 0.7);
-            }
+            background-color: #f8f9fa;
+        }
+        .main-header {
+            text-align: center;
+            font-size: 55px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(to right,rgb(14, 10, 12), #C71585);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(199, 21, 133, 0.5);
+        }
+        .sub-header {
+            text-align: center;
+            font-size: 20px;
+            color: #555;
+        }
+        .collection-title {
+            font-size: 25px;
+            font-weight: bold;
+            color: #C71585;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: gray;
+            margin-top: 50px;
+        }
+        .stButton>button {
+            background: linear-gradient(to right, #FF1493, #C71585);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 25px;
+            border: none;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(199, 21, 133, 0.5);
+        }
+        .stButton>button:hover {
+            background: linear-gradient(to right, #C71585, #FF1493);
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(255, 20, 147, 0.7);
+        }
         </style>
     """, unsafe_allow_html=True)
 
@@ -255,16 +256,14 @@ if check_password():
 
     # Featured Collection Slider
     st.markdown("## Featured Collections")
-    components.html(
-        """
+    components.html("""
         <div style="display: flex; overflow-x: scroll; gap: 10px; white-space: nowrap;">
             <img src='https://i.pinimg.com/736x/44/6c/e5/446ce5af853218ef156038c302a65e91.jpg' width='250'>
             <img src='https://i.pinimg.com/736x/28/b4/41/28b441c4990271334a1ba68ec2cd9ea8.jpg' width='250'>
             <img src='https://i.pinimg.com/736x/a0/9e/9a/a09e9aae5167320bd6cb4e042463c64e.jpg' width='250'>
             <img src='https://i.pinimg.com/736x/36/28/7f/36287f03327321f59a33e80652b2a4e1.jpg' width='250'>
         </div>
-        """, height=300
-    )
+    """, height=300)
 
     # Dress Categories
     st.markdown("## Shop by Category")
