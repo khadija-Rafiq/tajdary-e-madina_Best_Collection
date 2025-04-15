@@ -8,7 +8,7 @@ import webbrowser
 # ---------- PASSWORD PROTECTION ----------
 def check_password():
     def password_entered():
-        if st.session_state["password"] == "mysecret123":  # ← Yahan apna password daalo
+        if st.session_state["password"] == "mysecretjanu":  # ← Yahan apna password daalo
             st.session_state["password_correct"] = True
             del st.session_state["password"]  # Clear for security
         else:
