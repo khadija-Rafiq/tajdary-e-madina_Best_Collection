@@ -14,7 +14,7 @@ def check_password():
         with st.form("password_form", clear_on_submit=True):
             password = st.text_input("🔒 Enter password to continue:", type="password")
             if st.form_submit_button("Submit"):
-                if password == "mysecretjanu":
+                if password == "mysecret123":
                     st.session_state["password_correct"] = True
                 else:
                     st.error("❌ Incorrect password")
